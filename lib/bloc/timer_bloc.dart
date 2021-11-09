@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:timer/ticker.dart';
@@ -33,7 +32,7 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
       yield* _mapTimerTickedToState(event);
     } else if (event is TimerReset) {
       yield* _mapTimerResetToState(event);
-    } 
+    }
   }
 
   //*

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:timer/audio.dart';
 import 'package:timer/bloc/timer_bloc.dart';
 import 'package:timer/ticker.dart';
 import 'package:wave/config.dart';
@@ -68,6 +69,7 @@ class TimerText extends StatelessWidget {
     void setTimer(BuildContext context) {
       final minuteController = TextEditingController();
       final secondController = TextEditingController();
+
       showDialog(
         context: context,
         builder: (BuildContext context) => AlertDialog(
@@ -242,10 +244,11 @@ class Actions extends StatelessWidget {
               ),
             ],
             if (state is TimerRunComplete) ...[
-              FloatingActionButton(
-                child: Icon(Icons.replay),
-                onPressed: () => context.read<TimerBloc>().add(TimerReset()),
-              ),
+              Player(),
+              // FloatingActionButton(
+              //   child: Icon(Icons.replay),
+              //   onPressed: () => context.read<TimerBloc>().add(TimerReset()),
+              // ),
             ]
           ],
         );

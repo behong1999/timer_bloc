@@ -8,17 +8,21 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  audioplayers: ^0.20.0
   bloc: ^7.1.0
+  bloc_test: ^8.5.0
   equatable: ^2.0.3
   flutter:
     sdk: flutter
-  flutter_bloc: ^7.1.0
+  
   wave: ^0.2.0
 
 dev_dependencies:
-  bloc_test: ^8.0.2
-  flutter_test:
-    sdk: flutter
+  flutter_bloc: ^7.3.0
+  
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/audios/
