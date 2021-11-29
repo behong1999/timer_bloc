@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:timer/audio.dart';
-import 'package:timer/bloc/timer_bloc.dart';
+
 import 'package:timer/ticker.dart';
 import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
+
+import 'bloc/timer_bloc.dart';
 
 int duration = 120;
 
